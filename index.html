@@ -3,12 +3,436 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SMCC-CCIS Week 2025 - Campus Event Showcase and Registration</title>
+  <title>SMCC-CCIS Week 2026 - Campus Event Showcase and Registration</title>
+  
+   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body{
+    width:100%;
+    overflow-x:hidden;
+    }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background: #868582;
+      color: #222;
+    }
+
+    header {
+        
+      background: #1f7a3d;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      width: 100%;
+    }
+    
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1rem;
+    }
+
+    nav {
+      background: #145a2a;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 14px 10px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      width: 100%;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .main-content,
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    section,
+    aside,
+    article {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    h2 {
+      color: #1f7a3d;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #145a2a;
+      margin: 15px 0 10px;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    ul,
+    ol {
+      margin-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: #e8f5e9;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+    
+form {
+  display: grid;
+  gap: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+    label {
+      font-weight: bold;
+      margin-top: 6px;
+    }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        input[type="time"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #bbb;
+            border-radius: 6px;
+            font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .inline-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    .inline-options label {
+      font-weight: normal;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      background: #1f7a3d;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      background: #145a2a;
+    }
+
+    #faq-content {
+      margin-top: 15px;
+    }
+
+    pre {
+      background: #1e1e1e;
+      color: #f5f5f5;
+      padding: 15px;
+      overflow-x: auto;
+      border-radius: 8px;
+      margin: 10px 0;
+    }
+
+    code {
+      font-family: Consolas, monospace;
+    }
+
+    kbd {
+      background: #eee;
+      border: 1px solid #999;
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-family: monospace;
+    }
+
+    samp {
+      background: #f1f1f1;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+
+    .highlight-box {
+      background: #f9fff5;
+      border-left: 5px solid #1f7a3d;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+
+    .url-box,
+    .example-box {
+      background: #f5f5f5;
+      padding: 12px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin-top: 10px;
+    }
+
+    footer {
+  width:100%;
+  text-align:center;
+  background:#145a2a;
+  color:white;
+  padding:20px;
+  margin-top:20px;
+}
+
+    .small-note {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    @media screen and (max-width: 991px){
+
+    .container{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        order:2;
+    }
+
+    .main-content{
+        order:1;
+    }
+
+    header h1{
+        font-size:32px;
+    }
+
+    nav{
+        position:static;
+    }
+
+    iframe{
+        height:350px;
+    }
+}
+
+    @media screen and (max-width:768px){
+
+    body{
+        font-size:15px;
+    }
+    header,
+    nav,
+    footer{
+    width:100%;
+}
+
+body{
+    overflow-x:hidden;
+}
+
+    header{
+        padding:20px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    header p{
+        font-size:15px;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    nav a{
+        width:100%;
+        text-align:center;
+    }
+
+    .container{
+    width:100%;
+    padding:10px;
+    margin:0;
+    
+    }
+
+    section,
+    aside{
+        padding:15px;
+    }
+
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:nowrap;
+    }
+
+    img{
+        width:100%;
+        height:auto;
+    }
+
+    iframe{
+        width:100%;
+        height:280px;
+    }
+
+    .inline-options{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .inline-options label{
+        display:block;
+        width:100%;
+    }
+
+    .button-group{
+        flex-direction:column;
+    }
+
+    .button-group button{
+        width:100%;
+    }
+
+    input,
+    select,
+    textarea{
+        font-size:16px;
+    }
+
+    pre{
+        font-size:13px;
+    }
+}
+
+
+@media screen and (max-width:480px){
+
+    header h1{
+        font-size:22px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    h3{
+        font-size:17px;
+    }
+
+    p,
+    li{
+        font-size:14px;
+    }
+
+    iframe{
+        height:220px;
+    }
+
+    button{
+        width:100%;
+        font-size:15px;
+        padding:12px;
+    }
+}
+  </style>
+
   <body>
 
   <header>
-    <h1>SMCC-CCIS Week 2025 - Campus Event Showcase 🎓🎉</h1>
+    <h1>SMCC-CCIS Week 2026 - Campus Event Showcase 🎓🎉</h1>
     <p>Celebrating innovation, technology, and collaboration across the campus.</p>
+
   </header>
 
   <nav>
@@ -26,12 +450,12 @@
       <section id="overview">
         <h2>Event Overview ★</h2>
         <p>
-          <strong>BS Computer Science students are encouraged to participate in activities that strengthen programming, problem solving, teamwork, and innovation. This event provides opportunities to apply classroom knowledge to real world challenges through coding competitions, technology exhibits, workshops, and collaborative projects.
+         <strong>BS Computer Science students are encouraged to participate in activities that strengthen programming, problem solving, teamwork, and innovation. This event provides opportunities to apply classroom knowledge to real world challenges through coding competitions, technology exhibits, workshops, and collaborative projects.</strong>
         </p>
         <p>
           Throughout the week, students will improve their technical skills, explore new technologies, and connect with fellow aspiring software developers, cybersecurity specialists, data analysts, and CS professionals. &check;
         </p>
-        <img src="images/ccisweek-banner.jpg.png" alt="SMCC-CCIS Week 2025 Banner" style="width: 800px;"> />
+        <img src="images/ccisweek-banner.jpg.png" alt="SMCC-CCIS Week 2025 Banner">
       </section>
 
       <section id="schedule">
@@ -71,12 +495,13 @@
           All activities will be held at the <strong>SMCC Main Campus - IT Building</strong>.
           Use the embedded map below to find the location easily.
         </p>
-
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.843381139761!2d125.33956554622166!3d8.98755708536242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e1!3m2!1sen!2sph!4v1782899566523!5m2!1sen!2sph" width="840" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+<iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3745.843381139761!2d125.33956554622166!3d8.98755708536242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301ca2f04581cbb%3A0xe4e2656c7835d5f2!2sSaint%20Michael%20College%20of%20Caraga!5e1!3m2!1sen!2sph!4v1782899566523!5m2!1sen!2sph"
+    style="border:0;"
+    allowfullscreen
+    loading="lazy"
+    referrerpolicy="no-referrer-when-cross-origin">
+</iframe>
       </section>
 
       <section id="registration">
@@ -253,287 +678,5 @@ npm run dev</code></pre>
 
 </body>
 </html>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      background: #868582;
-      color: #222;
-    }
-
-    header {
-      background: #1f7a3d;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1rem;
-    }
-
-    nav {
-      background: #145a2a;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 14px 10px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      padding: 8px 14px;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background: rgba(255, 255, 255, 0.18);
-    }
-
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 20px auto;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 20px;
-    }
-
-    .main-content,
-    .sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    section,
-    aside,
-    article {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    h2 {
-      color: #1f7a3d;
-      margin-bottom: 15px;
-    }
-
-    h3 {
-      color: #145a2a;
-      margin: 15px 0 10px;
-    }
-
-    p {
-      margin-bottom: 12px;
-    }
-
-    ul,
-    ol {
-      margin-left: 20px;
-      margin-bottom: 12px;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-
-    table, th, td {
-      border: 1px solid #ccc;
-    }
-
-    th, td {
-      padding: 12px;
-      text-align: left;
-    }
-
-    th {
-      background: #e8f5e9;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 320px;
-      border: 0;
-      border-radius: 8px;
-      margin-top: 10px;
-    }
-
-    form {
-      display: grid;
-      gap: 12px;
-    }
-
-    label {
-      font-weight: bold;
-      margin-top: 6px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="number"],
-    input[type="date"],
-    input[type="time"],
-    input[type="file"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #bbb;
-      border-radius: 6px;
-      font-size: 1rem;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    .inline-options {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 5px;
-      margin-bottom: 5px;
-    }
-
-    .inline-options label {
-      font-weight: normal;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 10px;
-    }
-
-    button {
-      background: #1f7a3d;
-      color: white;
-      border: none;
-      padding: 10px 16px;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    button:hover {
-      background: #145a2a;
-    }
-
-    #faq-content {
-      margin-top: 15px;
-    }
-
-    pre {
-      background: #1e1e1e;
-      color: #f5f5f5;
-      padding: 15px;
-      overflow-x: auto;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-
-    code {
-      font-family: Consolas, monospace;
-    }
-
-    kbd {
-      background: #eee;
-      border: 1px solid #999;
-      border-radius: 4px;
-      padding: 2px 6px;
-      font-family: monospace;
-    }
-
-    samp {
-      background: #f1f1f1;
-      padding: 2px 6px;
-      border-radius: 4px;
-      font-family: monospace;
-    }
-
-    .highlight-box {
-      background: #f9fff5;
-      border-left: 5px solid #1f7a3d;
-      padding: 15px;
-      margin-top: 10px;
-      border-radius: 6px;
-    }
-
-    .url-box,
-    .example-box {
-      background: #f5f5f5;
-      padding: 12px;
-      border-radius: 8px;
-      overflow-x: auto;
-      margin-top: 10px;
-    }
-
-    footer {
-      text-align: center;
-      background: #145a2a;
-      color: white;
-      padding: 20px;
-      margin-top: 20px;
-    }
-
-    .small-note {
-      font-size: 0.95rem;
-      color: #444;
-    }
-
-    @media (max-width: 900px) {
-      .container {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        position: static;
-      }
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      button {
-        width: 100%;
-      }
-
-      .button-group {
-        flex-direction: column;
-      }
-    }
-  </style>
-</head>
+ 
 
